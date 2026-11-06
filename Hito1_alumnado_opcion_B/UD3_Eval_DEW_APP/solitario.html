@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/solitario.css">
+    <title>Solitario Manrique</title>
+</head>
+<body>
+    <header>
+        <h1>Solitario Manrique</h1>
+        <img id="logo" src="imagenes/logo.png" alt="Logotipo del CIFP César Manrique">
+    </header>
+    <nav aria-label="Modos de juego">
+        <button type="button" class="btn btn-outline-dark btn-modo" data-filtro="color">Escalera de color</button>
+        <button type="button" class="btn btn-outline-dark btn-modo" data-filtro="alternada">Escalera de color alternada</button>
+        <button type="button" class="btn btn-outline-dark btn-modo" data-filtro="palo">Mismo palo</button>
+    </nav>
+    <main>
+        <div class="marcadores">
+            <div>
+                <h2>Modo</h2>
+                <p id="modo_actual">sin elegir</p>
+            </div>
+            <div>
+                <h2>Tiempo</h2>
+                <p id="contador_tiempo">00:00:00</p>
+            </div>
+            <div>
+                <h2>Movimientos</h2>
+                <p id="contador_movimientos">0</p>
+            </div>
+        </div>
+
+        <div class="mesa">
+            <div id="inicial" class="tapete">
+                <p id="aviso">Elige un modo de juego para empezar</p>
+                <span id="contador_inicial" class="contador">0</span>
+            </div>
+
+            <div id="sobrantes" class="tapete">
+                <span id="contador_sobrantes" class="contador">0</span>
+            </div>
+
+            <div id="receptor1" class="tapete receptor">
+                <span id="contador_receptor1" class="contador">0</span>
+            </div>
+            <div id="receptor2" class="tapete receptor">
+                <span id="contador_receptor2" class="contador">0</span>
+            </div>
+            <div id="receptor3" class="tapete receptor">
+                <span id="contador_receptor3" class="contador">0</span>
+            </div>
+            <div id="receptor4" class="tapete receptor">
+                <span id="contador_receptor4" class="contador">0</span>
+            </div>
+        </div>
+
+        <div class="controles">
+            <button type="button" id="reset" class="btn btn-dark" disabled>Reiniciar</button>
+            <button type="button" id="nuevo" class="btn btn-outline-dark">Nuevo juego</button>
+            <button type="button" id="finalizar" class="btn btn-danger" disabled>Finalizar partida</button>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="js/solitario.js"></script>
+</body>
+</html>
